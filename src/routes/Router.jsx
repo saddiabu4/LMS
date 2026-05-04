@@ -1,13 +1,15 @@
 import AdminLayout from "@/layouts/AdminLayout"
-import Courses from "@/pages/courses/Courses"
-import Dashboard from "@/pages/dashboard/Dashboard"
-import Settings from "@/pages/settings/Settings"
-import Student from "@/pages/students/Student"
+import Courses from "@/pages/admin/Courses"
+import Dashboard from "@/pages/admin/Dashboard"
+import Settings from "@/pages/admin/Settings"
+import Student from "@/pages/admin/Student"
+import Login from "@/pages/auth/Login"
 import { Route, Routes } from "react-router-dom"
 
 const Router = () => {
   return (
     <Routes>
+      <Route path="/login" element={<Login />} /> 
       <Route path="/" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="students" element={<Student />} />
